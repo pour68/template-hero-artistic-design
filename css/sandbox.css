@@ -1,0 +1,127 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.carousel {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffff37;
+}
+
+.carousel__item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel__box {
+    position: absolute;
+    border: 5px solid #fff;
+}
+
+.carousel__box--md {
+    width: 150px;
+    height: 150px;
+    top: 30%;
+    left: 120px;
+    transform: translateY(-30%);
+}
+
+.carousel__box--lg {
+    width: 250px;
+    height: 250px;
+    top: 66%;
+    left: 265px;
+    transform: translateY(-55%);
+}
+
+.carousel__img {
+    display: block;
+    width: 100%;
+}
+
+.carousel__img--bottom {
+    position: absolute;
+    top: 58%;
+    left: 270px;
+    max-width: 240px;
+    opacity: 0.5;
+}
+
+.carousel__img--top {
+    position: absolute;
+    top: 24%;
+    left: 125.5px;
+    max-width: 140px;
+    opacity: 0.75;
+}
+
+.carousel__slogan {
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel__slogan span {
+    background-color: #000;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-top-left-radius: 8px;
+}
+
+.carousel__slogan h1 {
+    font-size: 4.5rem;
+    margin-top: -5px;
+    color: #fff;
+}
+
+.carousel__slogan p {
+    text-align: justify;
+    padding-right: 3rem;
+    margin-top: 0.25rem;
+    font-size: 1.1rem;
+    color: #111;
+}
+
+@media (max-width: 1170px) {
+    .carousel {
+        height: max-content;
+    }
+
+    .carousel__box {
+        display: none;
+    }
+
+    .carousel__img {
+        display: none;
+    }
+
+    .carousel__slogan {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: static;
+        padding: 4rem 1rem;
+        top: auto;
+        left: auto;
+        transform: translateY(0);
+    }
+
+    .carousel__slogan h1 {
+        font-size: 3rem;
+        margin-top: 0;
+    }
+
+    .carousel__slogan p {
+        padding-right: 0;
+    }
+}
